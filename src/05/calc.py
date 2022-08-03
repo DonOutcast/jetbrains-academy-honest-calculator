@@ -32,14 +32,27 @@ def check(text):
 
 
 def store_and_continue(result):
-    global memory
     print(result)
     print("Do you want to store the result? (y / n):")
     if input() == "y":
-        memory = result
+        really_save(result)
     print("Do you want to continue calculations? (y / n):")
     if input() == "y":
         check("Enter an equation")
+
+
+def really_save(result):
+    global memory
+    if is_one_digit(result):
+        print("Are you sure? It is only one digit! (y / n)")
+        if input() == "y":
+            print("Don't be silly! It's just one number! Add to the memory? (y / n)")
+            if input() == "y":
+                print("Last chance! Do you really want to embarrass yourself? (y / n)")
+                if input() == "y":
+                    memory = result
+    else:
+        memory = result
 
 
 def is_one_digit(number):
@@ -60,4 +73,5 @@ def extra(x, y, oper):
 
 
 memory = 0
-check("Enter an equation")
+if __name__ == "__main__":
+    check("Enter an equation")

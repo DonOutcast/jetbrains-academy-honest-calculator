@@ -1,11 +1,11 @@
 # Work on project.
 ## Part 1 Data collection.
-Description
+### Description
 We will start by implementing the flowchart below. Copy the messages carefully and assign them to the program variables. It makes no difference whether you make a list or each message is a separate variable. The appropriate messages must be displayed according to the flowchart.
 
+![block-schems](misc/images/cron1.png)
 
-
-Objectives
+### Objectives
 Implement the flowchart above. Please, follow our recommendations:
 
 The variable calc should have the following format: x operation y. For example: 2 + 3, 2 + g or 3.1 r 5;
@@ -20,7 +20,7 @@ msg_2 = "Yes ... an interesting math operation. You've slept through all classes
 Example
 The greater-than symbol followed by a space (> ) represents the user input. Note that it's not part of the input.
 
-Example 1:
+- Example 1:
 
 Enter an equation
 > 2 + m
@@ -33,12 +33,14 @@ Enter an equation
 Do you know what the numbers are? Stay focused!
 Enter an equation
 > 4.7 * 5.2
-Description
+
+## Part 2 First calculations 
+### Description
 In this stage, we will continue with the flowchart. Note that the blocks from the previous stage are in red. Be careful; some flows can work differently.
 
+![block_schem_2](misc/images/cron2.png)
 
-
-Objectives
+### Objectives
 Implement the flowchart above. While doing it, please, follow our recommendations:
 
 Don't use the built-in functions to calculate from a string;
@@ -47,7 +49,7 @@ Copy the message. The tests will check if the correct message appears in the cor
 Examples
 The greater-than symbol followed by a space (> ) represents the user input. Note that it's not part of the input.
 
-Example 1:
+- Example 1:
 
 Enter an equation
 > 2 + m
@@ -61,17 +63,20 @@ Yeah... division by zero. Smart move...
 Enter an equation
 > 4 * 5.2
 20.8
-Example 2:
+- Example 2:
 
 Enter an equation
 > 411 - 211
 200.0
 
-## Part 3
-Description
+## Part 3 Total recall
+### Description
 Take a look at the upgraded flowchart. As before, the old blocks are red-colored. Be careful; some flows can now work differently.
 
-Objectives
+![block_schems_3](misc/images/cron3.png)
+
+
+### Objectives
 To complete this stage, you need to implement the flowchart above. While doing it, please, follow our recommendations below:
 
 Don't use the built-in function eval() to calculate from a string;
@@ -84,7 +89,7 @@ msg_5 = "Do you want to continue calculations? (y / n):"
 Example
 The greater-than symbol followed by a space (> ) represents the user input. Note that it's not part of the input.
 
-Example 1:
+- Example 1:
 
 Enter an equation
 > 3 + 3
