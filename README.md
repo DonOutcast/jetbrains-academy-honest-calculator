@@ -74,7 +74,8 @@ Enter an equation
 Take a look at the upgraded flowchart. As before, the old blocks are red-colored. Be careful; some flows can now work differently.
 
 ![block_schems_3](misc/images/cron3.png)
-
+![continue_block](misc/images/cron4.png)
+![screen_4](misc/images/cron5.png)
 
 ### Objectives
 To complete this stage, you need to implement the flowchart above. While doing it, please, follow our recommendations below:

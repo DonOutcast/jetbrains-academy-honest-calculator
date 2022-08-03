@@ -1,47 +1,31 @@
-msg_0 = "Enter an equation"
-msg_1 = "Do you even know what numbers are? Stay focused!"
-msg_2 = "Yes ... an interesting math operation. You've slept through all classes, haven't you?"
-msg_3 = "Yeah... division by zero. Smart move..."
-result = 0
-
-
-def enter():
-    lexems = ['+', '-', '/', '*']
-    global result
-    print(msg_0)
-    user_input = input().split()
-
+def check(text):
+    global memory
+    print(text)
+    calc = input()
+    x, oper, y = calc.split()
+    if x == "M":
+        x = memory
+    if y == "M":
+        y = memory
     try:
-        x = float(user_input[0])
-        oper = str(user_input[1])
-        y = float(user_input[2])
-        if oper not in lexems:
-            print(msg_2)
-            enter()
-        if oper == "+":
-            result = x + y
-            print(result)
-        elif oper == "-":
-            result = x - y
-            print(result)
-        elif oper == "*":
-            result = x * y
-            print(result)
-        elif oper == "/":
-            result = x / y
-            print(result)
+        float(x), float(y)
+        if oper not in ["+", "-", "*", "/"]:
+            print("Yes ... an interesting math operation. You've slept through all classes, haven't you?")
+            check(text)
+        else:
+            if oper == "+":
+                store_and_continue((float(x) + float(y)))
+            if oper == "-":
+                store_and_continue((float(x) - float(y)))
+            if oper == "*":
+                store_and_continue((float(x) * float(y)))
+            if oper == "/":
+                if float(y) == 0:
+                    print("Yeah... division by zero. Smart move...")
+                    check(text)
     except ValueError:
-        print(msg_1)
-        enter()
-    except SyntaxError:
-        print(msg_2)
-        enter()
-    except ZeroDivisionError:
-        print(msg_3)
-        enter()
-    except IndexError:
-        print("Man")
-        enter()
+        print('Do you even know what numbers are? Stay focused!')
 
-
-enter()
+memory = 0
+if __name__ == "__main__":
+    check("Enter an equation")
